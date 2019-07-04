@@ -1,0 +1,124 @@
+/ import {Router, Route, Link} from 'react-router';
+// import {browserHistory} from 'react-router-dom';
+//import browserHistory from 'react-router/lib/browserHistory';
+
+constructor(props){
+    super(props);
+    this.state = {
+      data: ' '
+      //data: 'Initial Data...'
+      //data: 'Initial Data...',
+      // {
+      //   "id": 1,
+      //   "Name": "Fred",
+      // },
+      // {
+      //   "id": 2,
+      //   "Name": "Joel",
+      // },
+      //]
+    }
+     //this.setNewNumber = this.setNewNumber.bind(this)
+     //this.UpdateState = this.UpdateState.bind(this);
+     this.UpdateState = this.UpdateState.bind(this);
+     this.ClearInput = this.ClearInput.bind(this);
+    };
+      // setNewNumber() {
+      // this.setState({data: this.state.data + 1})
+      // }
+      // UpdateState(e){
+      //   this.setState({data: e.target.value});
+      // }
+      UpdateState(e){
+        this.setState({data: e.target.value});
+      }
+      ClearInput(){
+        this.setState({data: ' '});
+        ReactDOM.findDOMNode(this.refs.myInput).focus();
+      }
+
+      // <p>{i == 1 ? 'Fred is Clever' : 'You are Fool'}</p>
+        // <p style = {myStyle}>Hello Mr Fred!</p>
+        // <p><Header/></p>
+        // // <p><Contents/></p>
+        // <input type = "text" value = {this.state.data} onChange = {this.UpdateState} ref = "myInput" ></input>
+        // <button onClick = {this.ClearInput}>Clear</button>
+        // <h3>{this.state.data}</h3>
+        // <input type = "text" value = {this.state.data} onChange = {this.UpdateState} />
+        // <h3>{this.state.data} </h3>
+
+        // class Header extends React.Component{
+//   render(){
+//     return(
+//     <div>
+//     <h2>This Header Component</h2>
+//     </div>
+//     );
+//   }
+// }
+
+// class Contents extends React.Component{
+//   render(){
+//     return(
+//     <div>
+//     <h2>This is Contents Component</h2>
+//     </div>
+//     );
+//   }
+// }
+
+// // class TableRow extends React.Component{
+//   render(){
+//     return(
+//       <tr>
+//       <td>{this.props.data.id}</td>
+//       <td>{this.props.data.Name}</td>
+//       <td></td>
+//       </tr>
+// <table>
+        // <tbody>
+        // {this.state.data.map((person, i) => <TableRow key = {i} data = {person} />)}
+        // </tbody>
+        // </table>
+//       );
+//   }
+// }
+
+  // class Content extends React.Component {
+  // componentWillMount() {
+  // console.log('Component WILL MOUNT!')
+  // }
+  // componentDidMount() {
+  // console.log('Component DID MOUNT!')
+  // }
+  // componentWillReceiveProps(newProps) {
+  // console.log('Component WILL RECIEVE PROPS!')
+  // }
+  // shouldComponentUpdate(newProps, newState) {
+  // return true;
+  // }
+  // componentWillUpdate(nextProps, nextState) {
+  // console.log('Component WILL UPDATE!');
+  // }
+  // componentDidUpdate(prevProps, prevState) {
+  // console.log('Component DID UPDATE!')
+  // }
+  // componentWillUnmount() {
+  // console.log('Component WILL UNMOUNT!')
+  // }
+  // render() {
+  // return (
+  // <div>
+  // <h3>{this.props.myNumber}</h3>
+  // </div>
+  // );
+  // }
+  // }
+
+  //<Link to={'/home'}> Home </Link>
+        <Link to={'/about'}> About Us </Link>
+
+        <Switch>
+        <Route exact path = '/home' component = {Home} />
+        <Route exact path = '/about' component = {About} />
+        </Switch>*/
