@@ -30,13 +30,13 @@ class Menu extends React.Component{
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/about">About Me</Link>
           </li>
           <li>
             <Link to="/project">View Projects</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Me</Link>
           </li>
         </ul>
         <Route exact path="/" component={Home} />
