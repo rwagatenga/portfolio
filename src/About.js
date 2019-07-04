@@ -1,6 +1,7 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
 import './App.css';
+import Footer from './Footer';
 class About extends React.Component{
   render(){
   	const Center = {
@@ -26,24 +27,28 @@ class About extends React.Component{
       <div className="Left">
       <h2>Web Application</h2><br/><br/><br/>
       <p className="Paragraph" style={pStyle}>
-      I got many tasks related to different websites and web application especially
-      blog and web app
+      I have Three ( 3 ) Years of experience  in Web Application Development and also 
+      Blog creations using Php Framework called Laravel since end of 2016.
       </p>
       </div>
       <div className="Center" style={Center}>
       <h2>Mobile Application</h2><br/><br/><br/><br/><br/>
       <p style={pStyles}>
-      I've made different Mobile App with different companies in Rwanda but I need
-      to open my programming market with different people around the world
+      I have one ( 1 ) Year of experience in Mobile Application using JavaScript Hybrid called
+       React Native by accessing API since middle of 2018.
       </p>
       </div>
       <div className="Right">
       <h2>Technologies Used</h2><br/><br/><br/>
       <p className="Paragraph" style={pStyle}>
-      Mostly actually I used Laravel for most of the back-end I do and also Wordpress but for the front-end
-      I use React Js during most web app I do but for Mobile app I used React Native
+      Other Technologies I have used are C, C++ during Academic year, others are like Wordpress
+      for simplifying creation of different blogs and simple E-commerce Websites.
       </p>
       </div>
+
+      <div style={{marginTop: 200,}}>
+       <Footer />
+       </div>
       </div>
       );
   }

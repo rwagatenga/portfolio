@@ -2,6 +2,7 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 import Fred from './images/fredizo.png';
 import './App.css';
+import Footer from './Footer';
 class Home extends React.Component{
   render(){
     return(
@@ -26,6 +27,10 @@ class Home extends React.Component{
       you can hire me as a freelancer or engage me as an employee because I'm always find where 
       I can get profits
       </p>
+
+      <div style={{marginTop: 10, fontSize: 17}}>
+       <Footer />
+       </div>
       </div>
       );
   }

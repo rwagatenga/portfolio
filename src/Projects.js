@@ -1,5 +1,7 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
+import Footer from './Footer';
+
 class Projects extends React.Component{
   render(){
     const Center = {
@@ -43,6 +45,10 @@ class Projects extends React.Component{
       sport and health just for advising people for that it was my first project I've been realized
       </p>
       </div>
+
+      <div style={{marginTop: 200,}}>
+       <Footer />
+       </div>
       </div>
       );
   }

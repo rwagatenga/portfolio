@@ -1,5 +1,8 @@
+
 .App {
   background-image: url('./images/bann1.jpg');
+  margin: auto;
+  height: 107.8vh;
 }
 .Content {
   background: white;
@@ -8,6 +11,8 @@
   padding-left: 60px;
   opacity: 0.3;
   padding-top: 20px;
+  margin: auto;
+  height: 20vh;
   
   height: 685px;
 }
@@ -84,15 +89,18 @@ ul li a:hover{
   float: left;
 }
 .Contents {
-  margin-top: 10px;
-  margin-left: 100px;
+  /*margin-top: 10px;
+  margin-left: 100px;*/
+  margin: auto;
+  height: auto;
 }
 .contents {
   font-size: 20px;
   color: #000000;
   font-weight: bold;
   /*background-image: url('./images/con-rit-bg.png');*/
-  height: auto;
+  margin: auto;
+  height: 20vh;
 }
 .Left {
   float: left;
@@ -141,4 +149,8 @@ ul li a:hover{
 .FormInputs {
   float: left;
   margin-right: 40px;
+}
+.footer {
+  margin: auto;
+  height: 5vh;
 }

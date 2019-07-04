@@ -2,7 +2,7 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 import './App.css';
 import * as emailjs from 'emailjs-com';
-//import 'jquery';
+import Footer from './Footer';
 class Contact extends React.Component{
 	constructor(props){
     super(props);
@@ -107,6 +107,9 @@ class Contact extends React.Component{
         <p style={pComment}>{this.state.FirstComments}</p>
        <p style={pStyles}>{this.state.fullNames}</p>
        <p style={pComment}>{this.state.Comment}</p>
+       </div>
+       <div style={{marginTop: 220,}}>
+       <Footer />
        </div>
        </div>
       );
