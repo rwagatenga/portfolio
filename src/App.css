@@ -1,55 +1,237 @@
-
 .App {
   background-image: url('./images/bann1.jpg');
-  margin: auto;
-  height: 107.8vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
-.Content {
+.Container {
   background: white;
-  width: 880px;
-  margin-left: 250px;
-  padding-left: 60px;
-  opacity: 0.3;
-  padding-top: 20px;
-  margin: auto;
-  height: 20vh;
-  
-  height: 685px;
+  opacity: 0.7;
+  max-width: 77%
 }
-h2 {
-  float: left;
+.Container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+.Container:before,
+.Container:after {
+  display: table;
+  content: " ";
+}
+
+.Container:after {
+  clear: both;
+}
+
+.Container:before,
+.Container:after {
+  display: table;
+  content: " ";
+}
+
+.Container:after {
+  clear: both;
+}
+/*.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}*/
 .App-logo {
   animation: App-logo-spin infinite 15s linear;
-  height: 80px;
+  height: 75px;
   filter: brightness(100%);
   float: left;
-  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+
+}
+.App-title {
+  font-size: 1.6em;
+  margin-left: auto;
+  position: relative;
+  margin-top: 30px;
+  font-size: 40px;
 }
 
+/*.App-header {
+  background-color: #ffffff;
+  min-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}*/
 .App-header {
   background-color: white;
   height: 120px;
   padding: 20px;
   font-size: 0.6cm;
-  margin-left: 10px;
-}
-
-.App-title {
-  font-size: 2em;
   margin-left: 100px;
-  margin-top: 20px;
 }
 
-.App-intro {
-  font-size: large;
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+/*----Another----*/
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  height: 100%;
+  min-height: 20vh;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px;
+}
+.menu ul {
+  width: 100%;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.Navbar{
+  margin-top: 40px;
+  width: 100%;
+}
+.mr-auto{
+  margin-left: 100px;
+  width: 100%;
+  text-decoration: none;
+}
+.mr-auto .link {
+  padding: 10px;
+  background: #000000;
+  margin: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 7px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 15px;
+  width: 170px;
+  height: 150px;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 10px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 5px 5px 5px 5px;
+  text-align: center;
+}
+.mr-auto .link:hover {
+  font-weight: bold;
+}
+.link {
+  width: 100px;
+}
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+@media only screen and (min-width: 400px) {
+  .mr-auto {
+    width: 100%;
+    flex-direction: column;
+    flex: 30px;
+    flex-grow: 2;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+/*----Another----*/
 .Nav-bar {
   margin-top: 20px;
 }
@@ -83,24 +265,29 @@ ul li a:hover{
   background: white;
   color: black;
 }
+@media screen and (max-width: 600px) {
+  .Nav-bar ul li:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}*/
 .Profile {
-  width: 250px;
+  width: 210px;
   margin: 8px;
   float: left;
 }
 .Contents {
-  /*margin-top: 10px;
-  margin-left: 100px;*/
-  margin: auto;
-  height: auto;
+  margin-top: 10px;
+  margin-left: 100px;
 }
 .contents {
   font-size: 20px;
+  float: left;
   color: #000000;
   font-weight: bold;
   /*background-image: url('./images/con-rit-bg.png');*/
-  margin: auto;
-  height: 20vh;
+  height: auto;
 }
 .Left {
   float: left;
@@ -150,7 +337,59 @@ ul li a:hover{
   float: left;
   margin-right: 40px;
 }
-.footer {
-  margin: auto;
-  height: 5vh;
+/*Another*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  
 }
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  //margin: 10px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .Paragraph{
+    font-size: 19px;
+  }

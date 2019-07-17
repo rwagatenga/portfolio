@@ -1,8 +1,16 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import './App.css';
 import * as emailjs from 'emailjs-com';
-import Footer from './Footer';
+import { CardGroup, Card, Form, Button, Image } from 'react-bootstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faLinkedin,
+  faGithub,
+  faGooglePlus,
+} from "@fortawesome/free-brands-svg-icons";
+import './App.css';
+import Icon from './images/mobile-phone.png';
 class Contact extends React.Component{
 	constructor(props){
     super(props);
@@ -15,6 +23,7 @@ class Contact extends React.Component{
     }
     //this.addItem = this.addItem.bind(this);
   };
+
   addItem(e){
     e.preventDefault();
     const fullNames = this.fullNames.value;
@@ -22,19 +31,9 @@ class Contact extends React.Component{
     const Comment = this.Comment.value;
     //const isOnTheList = buyItem.includes(newItem);
 
-    if (fullNames === ''){//} || Email === '' || Comment === '') {
+    if (fullNames === '' || Email === '' || Comment === '') {
       this.setState({
-        messege: 'Full Names Field is Empty',
-      })
-    }
-    else if (Email === '') {
-    	this.setState({
-        messege: 'This E-mail Field is Empty',
-      })
-    }
-    else if (Comment === '') {
-    	this.setState({
-        messege: 'This Comment Field is Empty',
+        messege: 'Check if There is no Empty Field',
       })
     }
 
@@ -51,7 +50,7 @@ class Contact extends React.Component{
       var template_params = {
          "reply_to":  Email , 
          "from_name": fullNames+ "(" +Email + ")",
-         "to_name": "fredrwagatenga@gmail.com",
+         "to_name": "Fred",
          "message_html": Comment
       };
 
@@ -73,45 +72,104 @@ class Contact extends React.Component{
     this.addForm.reset();
   }
   render(){
-  	const pStyles = {
-		color: 'black',
-		marginTop: 70,
-		margin: -1,
-		fontSize: 17,
-		fontWeight: 'bold',
-		backgroundImage: 'url(/images/bk.jpg)',
-	};
-	const pComment = {
-		fontSize: 19,
-		margin: 7,
-	}
     return(
-      <div className="Contents" style={{height:'auto'}}>
-      <form ref={input => this.addForm = input} onSubmit = {(e) => {this.addItem(e)}} className="FormInputs">
-      <label className="Labels">Names: </label><br/>
-        <input type = "text" ref= {input => this.fullNames = input} className="Inputs" placeholder="Full Names"/> <br/>
-        
-        <label className="Labels">E-mail: </label><br/>
-        <input type = "text" ref= {input => this.Email = input} className="Inputs" placeholder="email@domainName"/> <br/>
-        <label className="Labels">Message: </label><br/>
-        <textarea type = "text" ref= {input => this.Comment = input} className="Comment" placeholder="Your Request"> </textarea> <br/>
-       <button type = "submit" className="Add"> Send </button>
-       </form>
-       <div className="LeftSide">
-       {
-          this.state.messege !== '' && <p style = {pStyles}>{this.state.messege}</p>
+      <CardGroup style={{marginTop: 40}}>
+      <Card>
+      <Card.Body>
+          <Card.Title>Contact Form</Card.Title><br/>
+          <Card.Text>
+        <Form ref={input => this.addForm = input} onSubmit = {(e) => {this.addItem(e)}}>
+        <Form.Group controlId="formBasicEmail">
+        <Form.Label style={{fontSize: 17, fontWeight: 'bold', textAlign: 'left'}}>Full Name</Form.Label>
+        {
+          this.state.messege != '' && <p style={{color:'red'}}>{this.state.messege}</p>
         }
-        <p style={pStyles}>{this.state.first}</p>
-        <p style={pComment}>{this.state.FirstComment}</p>
-        <p style={pStyles}>{this.state.firsts}</p>
-        <p style={pComment}>{this.state.FirstComments}</p>
-       <p style={pStyles}>{this.state.fullNames}</p>
-       <p style={pComment}>{this.state.Comment}</p>
-       </div>
-       <div style={{marginTop: 220,}}>
-       <Footer />
-       </div>
-       </div>
+        <Form.Control ref= {input => this.fullNames = input} style={{border: 'solid', height: 45, borderRadius: 7}} type="text" placeholder="Enter Your Full Name" />
+        </Form.Group>
+        <Form.Group controlId="formBasicEmail">
+        <Form.Label style={{fontSize: 17, fontWeight: 'bold', textAlign: 'left'}}>Email address</Form.Label>
+
+        <Form.Control ref= {input => this.Email = input} style={{border: 'solid', height: 45, borderRadius: 7}} type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          I'll never share your email with anyone else.
+        </Form.Text>
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label style={{fontSize: 17, fontWeight: 'bold', textAlign: 'left'}}>Messege</Form.Label>
+          
+          <Form.Control ref= {input => this.Comment = input} style={{border: 'solid', borderRadius: 7}} as="textarea" rows="4" />
+        </Form.Group>
+        <Button variant="outline-primary" style={{padding: 10, border: 'solid', fontColor: 'black', borderColor: 'black', borderRadius: 7, width: 150, fontWeight: 'bold', fontSize: 18}} type="submit">
+          Submit
+        </Button>
+      </Form>
+        </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card style={{ border: 0}}>
+        <Card.Body>
+          <Card.Title>My Social Media</Card.Title><br/>
+          <Card.Text >
+
+          <p className="Paragraph">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                href="https://github.com/rwagatenga?tab=repositories" rel="noopener noreferrer" target="_blank"
+                className="github social" style={{textDecoration: 'none'}}
+             >
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+                &nbsp; &nbsp; Rwagatenga
+             </a>
+             
+          </p>
+          <p className="Paragraph">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                href="https://www.facebook.com/rwagatenga.fred" rel="noopener noreferrer" target="_blank"
+                className="facebook social" style={{textDecoration: 'none'}}
+             >
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+                &nbsp;&nbsp;&nbsp;&nbsp;Rwagatenga Fred 
+             </a>
+             
+          </p>
+          <p className="Paragraph">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                href="https://www.linkedin.com/in/fred-rwagatenga" rel="noopener noreferrer" target="_blank"
+                className="linkedin social" style={{textDecoration: 'none'}}
+             >
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                &nbsp; &nbsp;&nbsp; Fred Rwagatenga
+             </a>
+             
+          </p>
+          <p className="Paragraph">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=fredrwagatenga@gmail.com&su=House Rent Rwada&body=BODY&" rel="noopener noreferrer" target="_blank"
+                className="googleplus social"style={{textDecoration: 'none'}}
+             >
+                <FontAwesomeIcon icon={faGooglePlus} size="2x" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rwagatenga Fred
+             </a>
+              
+          </p>
+          <p className="Paragraph">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+                href="tel:+250781448238" rel="noopener noreferrer" target="_blank"
+                className="googleplus social" style={{textDecoration: 'none'}}
+             >
+                <Image src={Icon} style={{width: 30,}} />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+250-781-4482-382
+             </a>
+             
+          </p>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </CardGroup>
       );
   }
 }

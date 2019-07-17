@@ -2,52 +2,38 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
+//import { Button } from 'reactstrap';
+import {Navbar, Nav, } from 'react-bootstrap';
+//import { Toast, ToastBody, ToastHeader, Spinner } from 'reactstrap';
 import Home from './Home';
-import Contact from './Contact';
 import About from './About';
 import Projects from './Projects';
+import Contact from './Contact';
 
 class Menu extends React.Component{
   constructor(props) {
     super(props);
-    this.myFunction = this.myFunction.bind(this);
   }
-  myFunction(){
-  var x = document.getElementById("Nav-bar");
-  if (x.className === "Nav-bar") {
-    x.className += " responsive";
-  } else {
-    x.className = "Nav-bar";
-  }
-}
+
   render(){
     return(
-      <div className="content">
       <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About Me</Link>
-          </li>
-          <li>
-            <Link to="/project">View Projects</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Me</Link>
-          </li>
-        </ul>
+      <Navbar bg="white" expand="lg" className="Navbar">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto" style={{margin: 15, }}>
+            <Link to="/" style={{textDecoration: 'none', margin: 15}}><span className="link">Home</span></Link>
+            <Link to="/about" style={{textDecoration: 'none', margin: 15}}><span className="link">About Me</span></Link>
+            <Link to="/project" style={{textDecoration: 'none', margin: 15}}><span className="link">View Projects</span></Link>
+            <Link to="/contact" style={{textDecoration: 'none', margin: 15}}><span className="link">Contact Me</span></Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/project" component={Projects} />
         <Route exact path="/contact" component={Contact} />
-        <Route exact path="javascript:void(0);" onClick="{this.myFunction}" />
-        <i class="fa fa-bars"></i>
-      </div>
-    </Router>
-    </div>
+      </Router>
       );
   }
 }
