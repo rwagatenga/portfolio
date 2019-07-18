@@ -99,7 +99,7 @@ class Contact extends React.Component{
           
           <Form.Control ref= {input => this.Comment = input} style={{border: 'solid', borderRadius: 7}} as="textarea" rows="4" />
         </Form.Group>
-        <Button variant="outline-primary" style={{padding: 10, border: 'solid', fontColor: 'black', borderColor: 'black', borderRadius: 7, width: 150, fontWeight: 'bold', fontSize: 18}} type="submit">
+        <Button variant="outline-primary" style={{padding: 7, border: 'solid', fontColor: 'black', borderColor: 'black', borderRadius: 7, width: 100, fontWeight: 'bold', fontSize: 18}} type="submit">
           Submit
         </Button>
       </Form>
@@ -108,8 +108,12 @@ class Contact extends React.Component{
       </Card>
       <Card style={{ border: 0}}>
         <Card.Body>
-          <Card.Title>My Social Media</Card.Title><br/>
+          <Card.Title style={{textAlign: 'center'}}>My Social Media</Card.Title>
+           <Form.Text className="text-muted" style={{textAlign: 'center', marginButtom: 30}}>
+          <br/>Click on any Icon to Contact Me
+          </Form.Text><br/><br/>
           <Card.Text >
+         
 
           <p className="Paragraph" style={{textAlign: 'center'}}>
           
