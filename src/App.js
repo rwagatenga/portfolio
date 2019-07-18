@@ -15,7 +15,7 @@ function App()  {
     <Container className = "Container">
       
           <img src={Logo} className="App-logo" alt="logo" />
-          <h1 className="App-title" style={{marginLeft: 100}}>Fred Rwagatenga</h1>
+          <h1 className="App-title" >Fred Rwagatenga</h1>
           <Menu />
       <Card.Footer>
       <center><medium className="text-muted">&copy;&nbsp;2019 Fred Rwagatenga All Rights Reserved. </medium></center>

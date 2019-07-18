@@ -111,58 +111,58 @@ class Contact extends React.Component{
           <Card.Title>My Social Media</Card.Title><br/>
           <Card.Text >
 
-          <p className="Paragraph">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <p className="Paragraph" style={{textAlign: 'center'}}>
+          
             <a
                 href="https://github.com/rwagatenga?tab=repositories" rel="noopener noreferrer" target="_blank"
                 className="github social" style={{textDecoration: 'none'}}
              >
                 <FontAwesomeIcon icon={faGithub} size="2x" />
-                &nbsp; &nbsp; Rwagatenga
+                 {/* &nbsp; Rwagatenga*/}
              </a>
              
           </p>
-          <p className="Paragraph">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <p className="Paragraph" style={{textAlign: 'center'}}>
+          
             <a
                 href="https://www.facebook.com/rwagatenga.fred" rel="noopener noreferrer" target="_blank"
                 className="facebook social" style={{textDecoration: 'none'}}
              >
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
-                &nbsp;&nbsp;&nbsp;&nbsp;Rwagatenga Fred 
+                 {/*&nbsp; Rwagatenga Fred */}
              </a>
              
           </p>
-          <p className="Paragraph">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <p className="Paragraph" style={{textAlign: 'center'}}>
+          
             <a
                 href="https://www.linkedin.com/in/fred-rwagatenga" rel="noopener noreferrer" target="_blank"
                 className="linkedin social" style={{textDecoration: 'none'}}
              >
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                &nbsp; &nbsp;&nbsp; Fred Rwagatenga
+                  {/* &nbsp; Fred Rwagatenga*/}
              </a>
              
           </p>
-          <p className="Paragraph">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <p className="Paragraph" style={{textAlign: 'center'}}>
+          
             <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=fredrwagatenga@gmail.com&su=House Rent Rwada&body=BODY&" rel="noopener noreferrer" target="_blank"
                 className="googleplus social"style={{textDecoration: 'none'}}
              >
                 <FontAwesomeIcon icon={faGooglePlus} size="2x" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rwagatenga Fred
+                  {/*&nbsp; Rwagatenga Fred*/}
              </a>
               
           </p>
-          <p className="Paragraph">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <p className="Paragraph" style={{textAlign: 'center'}}>
+          
             <a
                 href="tel:+250781448238" rel="noopener noreferrer" target="_blank"
                 className="googleplus social" style={{textDecoration: 'none'}}
              >
                 <Image src={Icon} style={{width: 30,}} />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+250-781-4482-382
+                  {/*&nbsp; +250-781-4482-382*/}
              </a>
              
           </p>

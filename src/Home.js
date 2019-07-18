@@ -8,7 +8,7 @@ class Home extends React.Component{
     return(
     <CardGroup style={{marginTop: 40}}>
       <Card style={{ border: 0}}>
-        <Card.Img variant="top" src={Fred} style={{height: 500, width: 355}}/>
+        <Card.Img variant="top" src={Fred} style={{height: 370, width: 240}}/>
       </Card>
       <Card style={{ border: 0}}>
         <Card.Body>

@@ -24,7 +24,7 @@ class Menu extends React.Component{
           <Nav className="mr-auto" style={{margin: 15, }}>
             <Link to="/" style={{textDecoration: 'none', margin: 15}}><span className="link">Home</span></Link>
             <Link to="/about" style={{textDecoration: 'none', margin: 15}}><span className="link">About Me</span></Link>
-            <Link to="/project" style={{textDecoration: 'none', margin: 15}}><span className="link">View Projects</span></Link>
+            <Link to="/project" style={{textDecoration: 'none', margin: 15}}><span className="link">Projects</span></Link>
             <Link to="/contact" style={{textDecoration: 'none', margin: 15}}><span className="link">Contact Me</span></Link>
           </Nav>
         </Navbar.Collapse>
