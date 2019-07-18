@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardDeck, CardGroup, Card, } from 'react-bootstrap';
+import { CardDeck, Card, } from 'react-bootstrap';
 //import ReactDOM from 'react-dom';
 import './App.css';
 class About extends React.Component{

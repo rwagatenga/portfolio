@@ -11,9 +11,6 @@ import Projects from './Projects';
 import Contact from './Contact';
 
 class Menu extends React.Component{
-  constructor(props) {
-    super(props);
-  }
 
   render(){
     return(

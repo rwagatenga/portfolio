@@ -1,6 +1,6 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import { CardDeck, CardGroup, CardColumns, Card, Form, FormControl } from 'react-bootstrap';
+import { CardColumns, Card, } from 'react-bootstrap';
 import './App.css';
 class Projects extends React.Component{
   render(){
@@ -13,7 +13,7 @@ class Projects extends React.Component{
             <Card.Text>
               <p className="Paragraph">
               I've made Geolocation web based app where I link techncian and customers
-              according to their location in order to provide good services<a href=""></a>
+              according to their location in order to provide good services
               </p>
             </Card.Text>
           </Card.Body>

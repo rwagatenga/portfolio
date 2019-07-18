@@ -82,7 +82,7 @@ class Contact extends React.Component{
         <Form.Group controlId="formBasicEmail">
         <Form.Label style={{fontSize: 17, fontWeight: 'bold', textAlign: 'left'}}>Full Name</Form.Label>
         {
-          this.state.messege != '' && <p style={{color:'red'}}>{this.state.messege}</p>
+          this.state.messege !== '' && <p style={{color:'red'}}>{this.state.messege}</p>
         }
         <Form.Control ref= {input => this.fullNames = input} style={{border: 'solid', height: 45, borderRadius: 7}} type="text" placeholder="Enter Your Full Name" />
         </Form.Group>
