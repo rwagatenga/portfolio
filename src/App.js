@@ -18,7 +18,7 @@ function App()  {
           <h1 className="App-title" >Fred Rwagatenga</h1>
           <Menu />
       <Card.Footer>
-      <center><medium className="text-muted">&copy;&nbsp;2019 Fred Rwagatenga All Rights Reserved. </medium></center>
+      <center><medium className="text-muted">&copy;&nbsp; {1900 + new Date().getYear()}{" "} Fred Rwagatenga All Rights Reserved. </medium></center>
     </Card.Footer>
     </Container>
     </div>

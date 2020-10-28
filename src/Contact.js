@@ -15,13 +15,11 @@ class Contact extends React.Component{
 	constructor(props){
     super(props);
     this.state = {
-    	first: 'Fred',
-    	FirstComment: 'this boy is very a hard worker because he always work hard to achieve his goal in every aspect of programming so I would like him to welcome in Silicon Valley in US',
-    	firsts: 'Gradhir Ramvir',
-    	FirstComments: 'Hey Can you just give me this Project for 500$?',
-    	messege:'',
+    	fullNames: '',
+      email: '',
+      comment: '',
     }
-    //this.addItem = this.addItem.bind(this);
+    this.addItem = this.addItem.bind(this);
   };
 
   addItem(e){

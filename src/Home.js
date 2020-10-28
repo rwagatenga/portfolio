@@ -16,16 +16,16 @@ class Home extends React.Component{
           <Card.Text >
           <p className="Paragraph">
             Hello Everyone!<br/>
-          My name is RWAGATENGA Fred, I live in Rwanda.<br/>
-          I am a Web and Mobile App developer, This is my Portfolio I've made in React only, 
-          I like to learn new technologies born everyday that can help me to
-          make my stuff easly and secured.<br/>
+          My name is RWAGATENGA Fred, I live in Kigali, Rwanda.<br/>
+          I am a Web and Mobile App developer.
+          I like to learn new technologies created everyday that can help me to
+          make a secured system and which can perform better.<br/>
           </p>
           <p className="Paragraph">
           I like to have a contribution in society through programming like in
           economically, making stuff easly and effeciently, securing information like transaction, managing business 
           but not only business sectors but also government sector where we can
-          improve the way services offer to the people .<br/>
+          improve the way services offered to the people .<br/>
           </p>
 
           <p className="Paragraph">

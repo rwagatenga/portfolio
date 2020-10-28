@@ -1,11 +1,11 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import { CardColumns, Card, } from 'react-bootstrap';
+import { CardDeck, Card, } from 'react-bootstrap';
 import './App.css';
 class Projects extends React.Component{
   render(){
-    return(
-      <CardColumns style={{marginTop: 40}}>
+    return([
+      <CardDeck style={{marginTop: 20}}>
         <Card>
           {/*<Card.Img variant="top" src="holder.js/100px160" />*/}
           <Card.Body>
@@ -43,6 +43,8 @@ class Projects extends React.Component{
             </Card.Text>
           </Card.Body>
         </Card>
+      </CardDeck>,
+      <CardDeck style={{marginTop: 20}}>
         <Card>
           <Card.Body>
             <Card.Title>Real Estate Web App</Card.Title>
@@ -54,9 +56,30 @@ class Projects extends React.Component{
             </Card.Text>
           </Card.Body>
         </Card>
-
-      </CardColumns>
-      );
+        <Card>
+          <Card.Body>
+            <Card.Title>CST Paperless Web App</Card.Title>
+            <Card.Text>
+              <p className="Paragraph">
+              I have created a web app system of my college College of Science and Technology,
+              that manage, hostels, library, marks and final year project management.
+              </p>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Body>
+            <Card.Title>Service for Home</Card.Title>
+            <Card.Text>
+              <p className="Paragraph">
+              I have created web and mobile app for service home derivery where client can request a service like massage, garden cleaning etc..
+              and system find nearest provider that can provides or deriver a service requested by client.
+              </p>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </CardDeck>
+    ]);
   }
 }
 export default Projects;
